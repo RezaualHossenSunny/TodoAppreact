@@ -1,14 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Todo = () => {
+    const [add, Setadd]=useState([]);
+    const [item,setItem]=useState("");
+
+    const addItem=()=>{
+       add.push(item)
+       Setadd([...add]);
+    }
   return (
  
 
     <>
     <div className='div container'>
-        <input className='input' placeholder='Enter your Text'/>
-        <button type="button" class="btn btn-success btn">Add</button>
 
+        <input onChange={(e)=>setItem(e.target.value)} className='input' placeholder='Enter your Text'/>
+        <button onClick={addItem} type="button" class="btn btn-success btn">Add</button>
+        <table className='tbl'>
+            <tbody>
+                {
+                    add.length !==0 ?(
+                        add.map((idex,elemwnt)=>{
+                       return(
+                        <tr>
+                            <h1 className='text'>{idex}</h1>
+                            <td><button type="button" class="btn btn-danger">Rmove</button>
+</td>
+                        </tr>
+                       )
+                        })
+
+                    ):(<tr/>)
+                }
+            </tbody>
+        </table>
+        
     </div>
     </>
   )
