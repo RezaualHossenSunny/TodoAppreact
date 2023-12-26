@@ -19,7 +19,7 @@
     height: 50px;
 }
 .tbl{
-    margin-left: 220px;
+    margin-left: 300px;
     margin-top: 50px;
 }
 .text{
@@ -30,4 +30,5 @@
    background-color:orange;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    color: whitesmoke;
+   font-size: 36px;
 }

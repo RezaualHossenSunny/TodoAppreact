@@ -8,6 +8,11 @@ const Todo = () => {
        add.push(item)
        Setadd([...add]);
     }
+
+    const remove=(elemwnt)=>{
+    add.splice(elemwnt,1)
+    Setadd([...add])
+    }
   return (
  
 
@@ -24,11 +29,11 @@ const Todo = () => {
                        return(
                         <tr>
                             <h1 className='text'>{idex}</h1>
-                            <td><button type="button" class="btn btn-danger">Rmove</button>
+                            <td><button type="button" class="btn btn-danger" onClick={()=> remove(elemwnt)}>Rmove</button>
 </td>
                         </tr>
                        )
-                        })
+                        },)
 
                     ):(<tr/>)
                 }
